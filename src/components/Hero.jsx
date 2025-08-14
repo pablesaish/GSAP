@@ -18,7 +18,6 @@ const Hero = () => {
             type: "lines",
         });
 
-        // Apply text-gradient class once before animating
         heroSplit.chars.forEach((char) => char.classList.add("text-gradient"));
 
         gsap.from(heroSplit.chars, {
@@ -110,13 +109,7 @@ const Hero = () => {
             </section>
 
             <div className="video absolute inset-0">
-                <video
-                    ref={videoRef}
-                    muted
-                    playsInline
-                    preload="auto"
-                    src="/videos/output.mp4"
-                />
+                <video ref={videoRef} muted playsInline preload="auto" src="/videos/output.mp4" />
             </div>
         </>
     );
